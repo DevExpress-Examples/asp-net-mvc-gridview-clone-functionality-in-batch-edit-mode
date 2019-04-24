@@ -1,10 +1,10 @@
 <!-- default file list -->
 *Files to look at*:
 
-* [HomeController.cs](./CS/DXWebApplication1/Controllers/HomeController.cs) (VB: [HomeController.vb](./VB/DXWebApplication1/Controllers/HomeController.vb))
-* [Model.cs](./CS/DXWebApplication1/Models/Model.cs) (VB: [Model.vb](./VB/DXWebApplication1/Models/Model.vb))
-* [_GridViewPartial.cshtml](./CS/DXWebApplication1/Views/Home/_GridViewPartial.cshtml)
-* **[Index.cshtml](./CS/DXWebApplication1/Views/Home/Index.cshtml)**
+* [HomeController.cs](./CS/T115891/Controllers/HomeController.cs) (VB: [HomeController.vb](./VB/T115891VB/Controllers/HomeController.vb))
+* [Model.cs](./CS/T115891/Models/Model.cs) (VB: [Model.vb](./VB/T115891VB/Models/Model.vb))
+* [_GridViewPartial.cshtml](./CS/T115891/Views/Home/_GridViewPartial.cshtml)
+* **[Index.cshtml](./CS/T115891/Views/Home/Index.cshtml)**
 <!-- default file list end -->
 # GridView - How to implement copy / clone functionality in Batch Edit mode
 
