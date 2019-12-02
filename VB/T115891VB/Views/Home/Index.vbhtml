@@ -11,7 +11,7 @@
     function OnStartEdit(s, e) {
         if (copyFlag) {
             copyFlag = false;
-            for (var i = 0; i < s.GetColumnsCount() ; i++) {
+            for (var i = 1; i < s.GetColumnsCount() ; i++) {
                 var column = s.GetColumn(i);
                 if (column.visible == false || column.fieldName == undefined)
                     continue;
