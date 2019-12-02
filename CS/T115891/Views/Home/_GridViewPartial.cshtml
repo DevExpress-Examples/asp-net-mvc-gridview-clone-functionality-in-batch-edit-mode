@@ -4,17 +4,17 @@
         settings.Name = "GridView";
         settings.CallbackRouteValues = new { Controller = "Home", Action = "GridViewPartial" };
         settings.SettingsEditing.BatchUpdateRouteValues = new { Controller = "Home", Action = "BatchUpdatePartial" };
-        settings.SettingsEditing.Mode = DevExpress.Web.ASPxGridView.GridViewEditingMode.Batch;
+        settings.SettingsEditing.Mode = DevExpress.Web.GridViewEditingMode.Batch;
         settings.CustomActionRouteValues = new { Controller = "Home", Action = "GridViewCustomActionPartial" };
         settings.CommandColumn.Visible = true;
         settings.CommandColumn.ShowDeleteButton = true;
         settings.CommandColumn.ShowNewButtonInHeader = true;
-        settings.CommandColumn.CustomButtons.Add(new DevExpress.Web.ASPxGridView.GridViewCommandColumnCustomButton() { ID = "CopyButton", Text = "Copy" });
-        string mode = Session["Mode"] as string;
-        if (mode == "Row")
-            settings.SettingsEditing.BatchEditSettings.EditMode = DevExpress.Web.ASPxGridView.GridViewBatchEditMode.Row;
+        settings.CommandColumn.CustomButtons.Add(new DevExpress.Web.GridViewCommandColumnCustomButton() { ID = "CopyButton", Text = "Copy" });
+        string mode = ((string)Session["Mode"]).ToLowerInvariant();
+        if (mode == "row")
+            settings.SettingsEditing.BatchEditSettings.EditMode = DevExpress.Web.GridViewBatchEditMode.Row;
         else
-            settings.SettingsEditing.BatchEditSettings.EditMode = DevExpress.Web.ASPxGridView.GridViewBatchEditMode.Cell;
+            settings.SettingsEditing.BatchEditSettings.EditMode = DevExpress.Web.GridViewBatchEditMode.Cell;
         settings.KeyFieldName = "ID";
         settings.ClientSideEvents.BatchEditStartEditing = "OnStartEdit";
         settings.ClientSideEvents.CustomButtonClick = "OnCustomButtonClick";
@@ -37,8 +37,8 @@
         });
         settings.CellEditorInitialize = (s, e) =>
         {
-            DevExpress.Web.ASPxEditors.ASPxEdit editor = (DevExpress.Web.ASPxEditors.ASPxEdit)e.Editor;
-            editor.ValidationSettings.Display = DevExpress.Web.ASPxEditors.Display.Dynamic;
+            DevExpress.Web.ASPxEdit editor = (DevExpress.Web.ASPxEdit)e.Editor;
+            editor.ValidationSettings.Display = DevExpress.Web.Display.Dynamic;
         };
     });
 }
