@@ -6,24 +6,20 @@ using System.Web;
 using System.Web.Mvc;
 using T115891.Models;
 
-namespace T115891.Controllers
-{
-    public class HomeController : Controller
-    {
-        public ActionResult Index()
-        {
+namespace T115891.Controllers {
+    public class HomeController : Controller {
+        public ActionResult Index() {
+            Session["mode"] = "cell";
             return View();
         }
 
         [ValidateInput(false)]
-        public ActionResult GridViewPartial()
-        {
+        public ActionResult GridViewPartial() {
             return PartialView("_GridViewPartial", BatchEditRepository.GridData);
         }
 
         [HttpPost, ValidateInput(false)]
-        public ActionResult BatchUpdatePartial(MVCxGridViewBatchUpdateValues<GridDataItem, int> batchValues)
-        {
+        public ActionResult BatchUpdatePartial(MVCxGridViewBatchUpdateValues<GridDataItem, int> batchValues) {
             foreach (var item in batchValues.Insert)
             {
                 if (batchValues.IsValid(item))
@@ -44,8 +40,7 @@ namespace T115891.Controllers
             }
             return PartialView("_GridViewPartial", BatchEditRepository.GridData);
         }
-        public ActionResult GridViewCustomActionPartial(string key)
-        {
+        public ActionResult GridViewCustomActionPartial(string key) {
             Session["Mode"] = key;
             return PartialView("_GridViewPartial", BatchEditRepository.GridData);
         }

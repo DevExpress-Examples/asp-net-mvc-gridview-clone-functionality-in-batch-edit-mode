@@ -11,13 +11,14 @@
     function OnStartEdit(s, e) {
         if (copyFlag) {
             copyFlag = false;
-            for (var i = 0; i < s.GetColumnsCount() ; i++) {
+            for (var i = 1; i < s.GetColumnsCount() ; i++) {
                 var column = s.GetColumn(i);
                 if (column.visible == false || column.fieldName == undefined)
                     continue;
                 ProcessCells(rbl.GetSelectedIndex(), e, column, s);
             }
         }
+        
     }
     function ProcessCells(selectedIndex, e, column, s) {
             var isCellEditMode = selectedIndex == 0;
