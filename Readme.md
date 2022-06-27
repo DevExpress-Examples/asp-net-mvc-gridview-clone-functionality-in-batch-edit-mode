@@ -13,7 +13,7 @@
 <!-- default file list end -->
 # GridView - How to implement copy / clone functionality in Batch Edit mode
 <!-- run online -->
-**[[Run Online]](https://codecentral.devexpress.com/t115891/)**
+**[[Run Online]](https://codecentral.devexpress.com/128550233/)**
 <!-- run online end -->
 
 
