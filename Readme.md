@@ -5,9 +5,6 @@
 <!-- default badges end -->
 
 # GridView for MVC - How to implement clone functionality in batch edit mode
-<!-- run online -->
-**[[Run Online]](https://codecentral.devexpress.com/128550233/)**
-<!-- run online end -->
 
 This example demonstrates how implement a custom **Copy** button that allows users to clone a row in [GridView](https://docs.devexpress.com/AspNetMvc/DevExpress.Web.Mvc.GridViewExtension) extension in batch edit mode. 
 
